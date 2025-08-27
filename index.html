@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name • AI & Automation Builder</title>
+  <meta name="description" content="I turn ideas into working AI tools—fast." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Nav -->
+  <header class="nav" role="navigation" aria-label="Primary">
+    <div class="nav__inner container">
+      <a class="brand" href="#hero" aria-label="Go to Home">YN</a>
+      <nav class="nav__links" aria-label="Sections">
+        <a class="nav__link" href="#hero">Home</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#goals">Goals</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+      <button class="nav__burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero container">
+    <div class="hero__copy">
+      <h1 class="h1">Your Name</h1>
+      <h2 class="h2 accent">AI & Automation Builder</h2>
+      <p class="lead">I turn ideas into working AI tools—fast.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn--primary">Contact</a>
+        <a href="#projects" class="btn btn--ghost">View Projects</a>
+      </div>
+    </div>
+
+    <!-- 3D card illustration (CSS-only depth) -->
+    <div class="hero__art" aria-hidden="true">
+      <div class="chip-3d">
+        <div class="chip-3d__top glow"></div>
+        <div class="chip-3d__mid"></div>
+        <div class="chip-3d__base"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHT STRIP -->
+  <section class="strip">
+    <div class="container strip__row" role="list">
+      <span class="pill pill--primary" role="listitem">⭐ Prompt Engineering</span>
+      <span class="pill pill--primary" role="listitem">⭐ Using AI in Work</span>
+      <span class="pill" role="listitem">Chatbot Development</span>
+      <span class="pill" role="listitem">AI Automation</span>
+      <span class="pill" role="listitem">Gradio</span>
+      <span class="pill" role="listitem">Basic Python</span>
+      <span class="pill" role="listitem">Git & GitHub</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section container">
+    <h2 class="section__title">Projects</h2>
+
+    <!-- Project 1: Hero -->
+    <article class="card-3d">
+      <div class="card-3d__media cover--gradient" aria-hidden="true"></div>
+      <div class="card-3d__body">
+        <h3 class="h3">Smart AI Dashboard</h3>
+        <p>
+          A Hugging Face Spaces app built with Gradio + Plotly + Groq (LLaMA 3).
+          Upload CSV/Excel, preview & clean 200 rows, build charts instantly,
+          and chat with a data-aware AI assistant.
+        </p>
+        <ul class="bullets">
+          <li>Instant charts post-upload (no extra steps).</li>
+          <li>Groq-powered Q&A with dataset profile context.</li>
+          <li>Lightweight, dark, professional UI with subtle 3D buttons.</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn--primary" href="#" target="_blank" rel="noopener">Live Demo</a>
+          <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">GitHub Repo</a>
+        </div>
+        <div class="tags">
+          <span>Gradio</span><span>Plotly</span><span>Groq</span><span>Python</span><span>UX</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="card-3d">
+      <div class="card-3d__media cover--gradient-2" aria-hidden="true"></div>
+      <div class="card-3d__body">
+        <h3 class="h3">Portfolio (3D Style)</h3>
+        <p>
+          A premium, animated personal portfolio with CSS-only 3D effects,
+          delightful micro-interactions, and recruiter-friendly information architecture.
+        </p>
+        <ul class="bullets">
+          <li>3D button effects + soft cards + clean grid.</li>
+          <li>Responsive, accessible, and fast.</li>
+          <li>Clear storytelling to highlight AI strengths.</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn--primary" href="#" target="_blank" rel="noopener">Live Site</a>
+          <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">GitHub Repo</a>
+        </div>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>JS</span><span>UX</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section container">
+    <h2 class="section__title">Skills</h2>
+    <div class="chips">
+      <span class="chip chip--pulse">⭐ Prompt Engineering</span>
+      <span class="chip chip--pulse">⭐ Using AI in Work</span>
+      <span class="chip chip--float">AI & AI Automation</span>
+      <span class="chip chip--float">Chatbot Development</span>
+      <span class="chip chip--float">Gradio</span>
+      <span class="chip chip--float">Basic Python</span>
+      <span class="chip chip--float">Git & GitHub</span>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE / FOCUS + GOALS -->
+  <section id="goals" class="section container">
+    <h2 class="section__title">Focus & Career Goals</h2>
+    <p class="max-text">
+      I focus on AI & Automation—rapid prototyping with AI, an automation mindset,
+      clean UX, and shipping fast. Career path: building practical tools that
+      create leverage and streamline real workflows.
+    </p>
+    <ul class="bullets bullets--cols">
+      <li>Rapid prototyping with AI</li>
+      <li>Automation-first thinking</li>
+      <li>Clean UX, accessible patterns</li>
+      <li>High signal communication</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section container">
+    <h2 class="section__title">Let’s build with AI</h2>
+    <div class="contact">
+      <a class="contact__item" href="mailto:your.email@example.com">your.email@example.com</a>
+      <a class="contact__item" href="https://github.com/yourhandle" target="_blank" rel="noopener">github.com/yourhandle</a>
+      <a class="contact__item" href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">linkedin.com/in/yourhandle</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Your Name</span>
+      <span>Built with clean HTML/CSS/JS • Accessible & fast</span>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
