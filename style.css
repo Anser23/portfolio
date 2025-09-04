@@ -187,3 +187,18 @@ a:focus-visible, button:focus-visible{
 @media (prefers-reduced-motion:reduce){
   *{ animation:none !important; transition:none !important }
 }
+.hero__art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero__art video.logo-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px; /* matches your card style */
+}
+
+
