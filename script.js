@@ -1,34 +1,33 @@
-// Smooth active link + mobile burger
-const links = [...document.querySelectorAll('.nav__link')];
-const sections = links.map(a => document.querySelector(a.getAttribute('href')));
-const burger = document.querySelector('.nav__burger');
-const navLinks = document.querySelector('.nav__links');
+// script.js — small, dependency-free UX helpers
 
-burger?.addEventListener('click', () => {
-  const open = navLinks.style.display === 'flex';
-  navLinks.style.display = open ? 'none' : 'flex';
-  burger.setAttribute('aria-expanded', String(!open));
+// Current year in footer
+document.addEventListener('DOMContentLoaded', () => {
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
 });
 
-// Intersection Observer for active link highlight
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    const idx = sections.indexOf(entry.target);
-    if (idx >= 0 && entry.isIntersecting) {
-      links.forEach(l => l.classList.remove('is-active'));
-      links[idx].classList.add('is-active');
-    }
+// Active link highlight on scroll
+const links = [...document.querySelectorAll('.nav__link')];
+const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+const setActive = () => {
+  let idx = 0, fromTop = window.scrollY + 100;
+  sections.forEach((sec, i) => {
+    if (sec.offsetTop <= fromTop) idx = i;
   });
-}, { threshold: 0.5 });
+  links.forEach((l, i) => l.classList.toggle('active', i === idx));
+};
+setActive();
+window.addEventListener('scroll', setActive, { passive: true });
 
-sections.forEach(sec => sec && io.observe(sec));
-
-// Footer year
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Respect reduced motion for potential future animations
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  document.querySelectorAll('[style*="animation"], [class*="chip--"]').forEach(el => {
-    el.style.animation = 'none';
+// Smooth “internal” anchor scroll (for older browsers)
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.pushState(null, '', id);
   });
-}
+});
